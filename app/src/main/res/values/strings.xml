@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Helpdesk</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">About Report</string>
+    <string name="share_success_text">I mastered #UdacityAndroidTrivia with %1$d/%2$d/%3$d correct questions!</string>
+</resources>
