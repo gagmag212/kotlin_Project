@@ -3,9 +3,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bg"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/pngtree-exam-study-student-background-image_247270"
         tools:context=".Repair">
 
         <Button
@@ -13,7 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="100dp"
-            android:text="Report"
+            android:text="@string/report"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.541"

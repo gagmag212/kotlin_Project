@@ -2,9 +2,11 @@ package com.example.helpdesk
 
 
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.example.helpdesk.databinding.FragmentStartMainBinding
@@ -14,6 +16,8 @@ import com.example.helpdesk.databinding.FragmentStartMainBinding
  */
 class StartMain : Fragment() {
 
+
+    private lateinit var viewModel: GameViewModel
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -25,6 +29,8 @@ class StartMain : Fragment() {
         binding.btnReport.setOnClickListener { view->
             view.findNavController().navigate(StartMainDirections.actionStartMain5ToRepair("start","program","helpdesk"))
         }
+        Log.i("GameFragment", "Called ViewModelProviders.of")
+        viewModel = ViewModelProviders.of(this).get(GameViewModel::class.java)
         setHasOptionsMenu(true)
         return binding.root
     }
