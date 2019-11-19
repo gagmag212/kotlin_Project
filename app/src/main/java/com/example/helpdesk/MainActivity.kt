@@ -29,7 +29,10 @@ class MainActivity : AppCompatActivity() {
         val navController = this.findNavController(R.id.myNavHostFragment)
         return navController.navigateUp()
     }
+
+    //dki
     override fun onStart() {
+
         super.onStart()
 
         Timber.i("onStart Called")

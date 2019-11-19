@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/startMain5"
         android:name="com.example.helpdesk.StartMain"
-        android:label="StartMain" >
+        android:label="Start">
         <action
             android:id="@+id/action_startMain5_to_repair"
             app:destination="@id/repair" />
@@ -15,8 +15,8 @@
     <fragment
         android:id="@+id/report3"
         android:name="com.example.helpdesk.report"
-        android:label="fragment_report"
-        tools:layout="@layout/fragment_report" >
+        android:label="Report"
+        tools:layout="@layout/fragment_report">
         <action
             android:id="@+id/action_report3_to_repair"
             app:destination="@id/repair" />
@@ -24,17 +24,19 @@
     <fragment
         android:id="@+id/repair"
         android:name="com.example.helpdesk.Repair"
-        android:label="fragment_repair"
-        tools:layout="@layout/fragment_repair" >
+        android:label="Detail"
+        tools:layout="@layout/fragment_repair">
         <action
             android:id="@+id/action_repair_to_report3"
             app:destination="@id/report3" />
-        <argument android:name="StringRequester"
+        <argument
+            android:name="StringRequester"
             app:argType="string" />
         <argument
             android:name="StringTitle"
             app:argType="string" />
-        <argument android:name="StringDesciption"
+        <argument
+            android:name="StringDesciption"
             app:argType="string" />
     </fragment>
     <fragment

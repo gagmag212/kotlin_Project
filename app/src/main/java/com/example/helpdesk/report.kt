@@ -29,7 +29,7 @@ class report : Fragment() {
         val binding = DataBindingUtil.inflate<FragmentReportBinding>(inflater,
             R.layout.fragment_report,container,false)
         binding.btnReport1.setOnClickListener { view->
-            view.findNavController().navigate(reportDirections.actionReport3ToRepair(txt_requester.toString(),txt_title.toString(),txt_desciption.toString()))
+            view.findNavController().navigate(reportDirections.actionReport3ToRepair("Requester","title","desciption"))
         }
 
         setHasOptionsMenu(true)
@@ -56,6 +56,7 @@ class report : Fragment() {
 
 
     private fun getShareIntent() : Intent {
+
         val shareIntent = Intent(Intent.ACTION_SEND)
         shareIntent.setType("text/plain")
             .putExtra(Intent.EXTRA_TEXT,"Share")

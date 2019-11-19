@@ -7,6 +7,10 @@
     <string name="report">Report</string>
     <string name="start">Start</string>
     <string name="about">About</string>
+    <string name="Requester">Requester</string>
+    <string name="Title">Title</string>
+    <string name="Desciption">Desciption</string>
+    <string name="textview"></string>
 
 
 </resources>

@@ -26,7 +26,7 @@ class StartMain : Fragment() {
         val binding = DataBindingUtil.inflate<FragmentStartMainBinding>(inflater,
             R.layout.fragment_start_main,container,false)
 
-        binding.btnReport.setOnClickListener { view->
+        binding.btnStrart.setOnClickListener { view->
             view.findNavController().navigate(StartMainDirections.actionStartMain5ToRepair("start","program","helpdesk"))
         }
         Log.i("GameFragment", "Called ViewModelProviders.of")

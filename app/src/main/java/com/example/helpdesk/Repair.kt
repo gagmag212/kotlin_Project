@@ -12,6 +12,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.example.helpdesk.databinding.FragmentRepairBinding
 import com.example.helpdesk.databinding.FragmentStartMainBinding
+import kotlinx.android.synthetic.main.fragment_repair.*
 import timber.log.Timber
 import java.util.*
 
@@ -22,6 +23,7 @@ import java.util.*
  */
 class Repair : Fragment() {
 
+    var Requester = ""
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -33,9 +35,10 @@ class Repair : Fragment() {
             view.findNavController().navigate(RepairDirections.actionRepairToReport3())
         }
         val args = RepairArgs.fromBundle(arguments!!)
+        Requester = args.StringRequester
         Toast.makeText(context, "StringRequester: ${args.StringRequester}, StringTitle: ${args.StringTitle},StringDesciption: ${args.StringDesciption}", Toast.LENGTH_LONG).show()
 
-
+        text.setText("hfjg")
         return binding.root
     }
 
