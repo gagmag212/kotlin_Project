@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
@@ -15,6 +16,11 @@ import com.example.helpdesk.databinding.FragmentStartMainBinding
  * A simple [Fragment] subclass.
  */
 class StartMain : Fragment() {
+    val Desciption = MutableLiveData<String>()
+    // The current score
+    val Title = MutableLiveData<String>()
+    val Requester = MutableLiveData<String>()
+
 
 
     private lateinit var viewModel: GameViewModel
@@ -27,8 +33,9 @@ class StartMain : Fragment() {
             R.layout.fragment_start_main,container,false)
 
         binding.btnStrart.setOnClickListener { view->
-            view.findNavController().navigate(StartMainDirections.actionStartMain5ToRepair("start","program","helpdesk"))
+            view.findNavController().navigate(StartMainDirections.actionStartMain5ToRepair("","",""))
         }
+
         Log.i("GameFragment", "Called ViewModelProviders.of")
         viewModel = ViewModelProviders.of(this).get(GameViewModel::class.java)
         setHasOptionsMenu(true)
@@ -43,6 +50,8 @@ class StartMain : Fragment() {
             view!!.findNavController())
                 || super.onOptionsItemSelected(item)
     }
+
+
 
 
 }

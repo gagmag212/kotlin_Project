@@ -28,6 +28,7 @@ class Repair : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         // Inflate the layout for this fragment
         val binding = DataBindingUtil.inflate<FragmentRepairBinding>(inflater,
             R.layout.fragment_repair,container,false)
@@ -35,10 +36,13 @@ class Repair : Fragment() {
             view.findNavController().navigate(RepairDirections.actionRepairToReport3())
         }
         val args = RepairArgs.fromBundle(arguments!!)
-        Requester = args.StringRequester
+        //Requester = args.StringRequester
         Toast.makeText(context, "StringRequester: ${args.StringRequester}, StringTitle: ${args.StringTitle},StringDesciption: ${args.StringDesciption}", Toast.LENGTH_LONG).show()
 
-        text.setText("hfjg")
+        if(args.StringRequester != ""){
+            binding.text.text = "Requester: "+args.StringRequester.toString()+"\nTitle: "+args.StringTitle.toString()+"\nDesciption: "+args.StringDesciption.toString()
+
+        }
         return binding.root
     }
 

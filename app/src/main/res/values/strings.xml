@@ -2,7 +2,7 @@
     <string name="app_name">Helpdesk</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">About Report</string>
+    <string name="hello_blank_fragment">About Report \n       A help desk is a resource intended to provide the customer or end user with information and support related to a company or institution products and services. ... Corporations usually provide help desk support to their customers through various channels such as toll-free numbers, websites, instant messaging, or email</string>
     <string name="share">share</string>
     <string name="report">Report</string>
     <string name="start">Start</string>
@@ -11,6 +11,7 @@
     <string name="Title">Title</string>
     <string name="Desciption">Desciption</string>
     <string name="textview"></string>
+    <string name="helpdesk">helpdesk</string>
 
 
 </resources>
