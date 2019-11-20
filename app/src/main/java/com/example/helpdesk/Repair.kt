@@ -37,6 +37,7 @@ class Repair : Fragment() {
             view.findNavController().navigate(RepairDirections.actionRepairToReport3())
         }
         val args = RepairArgs.fromBundle(arguments!!)
+
         //Requester = args.StringRequester
         Toast.makeText(context, "StringRequester: ${args.StringRequester}, StringTitle: ${args.StringTitle},StringDesciption: ${args.StringDesciption}", Toast.LENGTH_LONG).show()
         viewModel.Desciption(args.StringRequester, args.StringTitle,args.StringDesciption)

@@ -28,12 +28,13 @@ class StartMain : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val viewModel = ViewModelProviders.of(this).get(GameViewModel::class.java)
         // Inflate the layout for this fragment
         val binding = DataBindingUtil.inflate<FragmentStartMainBinding>(inflater,
             R.layout.fragment_start_main,container,false)
 
         binding.btnStrart.setOnClickListener { view->
-            view.findNavController().navigate(StartMainDirections.actionStartMain5ToRepair("55","55","55"))
+            view.findNavController().navigate(StartMainDirections.actionStartMain5ToRepair("","",""))
         }
 
         Log.i("GameFragment", "Called ViewModelProviders.of")
