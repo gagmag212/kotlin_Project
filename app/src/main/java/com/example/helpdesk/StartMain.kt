@@ -33,15 +33,16 @@ class StartMain : Fragment() {
             R.layout.fragment_start_main,container,false)
 
         binding.btnStrart.setOnClickListener { view->
-            view.findNavController().navigate(StartMainDirections.actionStartMain5ToRepair("","",""))
+            view.findNavController().navigate(StartMainDirections.actionStartMain5ToRepair("55","55","55"))
         }
 
         Log.i("GameFragment", "Called ViewModelProviders.of")
-        viewModel = ViewModelProviders.of(this).get(GameViewModel::class.java)
+
         setHasOptionsMenu(true)
         return binding.root
     }
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+
         super.onCreateOptionsMenu(menu, inflater)
         inflater?.inflate(R.menu.options_menu, menu)
     }

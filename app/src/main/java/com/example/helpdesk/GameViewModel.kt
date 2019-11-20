@@ -11,14 +11,20 @@ class GameViewModel : ViewModel() {
     val Requester = MutableLiveData<String>()
     init {
         Log.i("GameViewModel", "GameViewModel created!")
-        Desciption.value = "Desciption"
-        Title.value = "Title"
-        Requester.value = "Requester"
+        //Desciption.value = "Desciption"
+        //Title.value = "Title"
+        //Requester.value = "Requester"
+
 
     }
     override fun onCleared() {
         super.onCleared()
         Log.i("GameViewModel", "GameViewModel destroyed!")
+    }
+    fun Desciption(Req:String,Tit:String,Des:String){
+        Title.value = Tit
+        Requester.value = Req
+        Desciption.value = Des
     }
 
 
